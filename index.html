@@ -9,16 +9,27 @@
   <!--
     1. Call / fetch(path)
     2. response - returns text, blob(img), json, etc
+    * if blob use URL.createObjectURL(blob);
     (steps 1 and 2 are a promise)
     3. complete data stream (grab the data that's in the body of the response)
     4. do something (like 'make an image element')
+    5. handle errors
+    6. use async / await
   -->
 
-  <img src="" alt="puppers">
+  <img src="" alt="dog photo" id="puppers">
 
   <script>
     console.log('About to fetch a thing');
-    fetch()
+    fetch('gemmalook.jpg')
+    .then(response => {
+      console.log(response);
+      return response.blob();
+    })
+    .then(blob => {
+      console.log(blob);
+      document.getElementById('puppers').src = URL.createObjectURL(blob);
+    })
   </script>
 </body>
 </html>

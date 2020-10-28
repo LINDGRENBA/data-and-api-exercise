@@ -38,7 +38,7 @@
     });
 
     async function getGemma() {
-      const response = await fetch('gemmalook.jpg');
+      const response = await fetch('img/gemmalook.jpg');
       const blob = await response.blob();
       document.getElementById('puppers').src = URL.createObjectURL(blob);
     }

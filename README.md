@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Canvas Page</h1>
+<h1 style="text-align: center;">Data & API Exercise</h1>
 
 #### An exercise in using fetch and async await, 10.27.2020
 
